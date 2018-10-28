@@ -10,46 +10,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Custom style -->
     <link href="latitude.css" rel="stylesheet">
-
 </head>
 
 <body>
-
-    <nav class="navbar ">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">Latitude </a>
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <div class="col-md-1"></div>
-                <div class="col-md-1"></div>
-                <div class="col-md-1"></div>
-
-            </div>
-            <div id="navbar2" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Plots
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="maxtemp.html">Max Temperature</a></li>
-                            <li><a href="humidity.html">Humidity</a></li>
-                            <li><a href="cloudiness.html">Cloudiness</a></li>
-                            <li><a href="windspeed.html">Wind Speed</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="comparison.html">Comparison</a></li>
-                    <li><a href="data.html">Data</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+   
     <!-- <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -73,25 +37,55 @@
         </div>
     </nav> -->
 
+    <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">Latitude </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-1"></div>
+    
+                </div>
+                <div id="navbar2" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+    
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Plots
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="maxtemp.html">Max Temperature</a></li>
+                                <li><a href="humidity.html">Humidity</a></li>
+                                <li><a href="cloudiness.html">Cloudiness</a></li>
+                                <li><a href="windspeed.html">Wind Speed</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="comparison.html">Comparison</a></li>
+                        <li><a href="data.html">Data</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
     <div class="container">
         <!--First Row-->
         <div class="row">
             <!--First of Two Columns-->
             <div class="col-lg-8 col-sm-12 rowElement">
-                <h1>Summary: Latitude vs. X</h1>
+                <h1>Max Temperature</h1>
                 <hr>
                 <img class="wrap img-responsive" src="images/Fig1.png" alt="Fig 1">
-                <p>The purpose of this project was to analyze how weather changes as you get closer to the
-                    equator. To accomplish this analysis, we
-                    first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
-                <br>
-                <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs.
-                    latitude. Factors we looked at
-                    included: temperature, cloudiness, wind speed, and humidity. This site provides the source
-                    data and the visualizations
-                    created as a part of this analysis, as well as explanations and descriptions of any trends
-                    and correlations witnessed.
+                <p>As expected, the weather becomes significantly warmer as one approaches the equator (0 Degree Latitude). 
+                    More interestingly, however, is the fact that the southern hemisphere tends to be warmer this time of year
+                    than the northern hemisphere. This may be due to the tilt of the earth at the time of the year this data was
+                    gathered.
                 </p>
+               
             </div>
 
             <!--Second of Two Columns-->
@@ -99,7 +93,7 @@
                 <h2>Visualizations</h2>
                 <hr>
                 <div class="col-lg-6 col-md-3 col-sm-3">
-                    <img id="Fig1" src="images/Fig1.png" alt="maxtemp" class="img-responsive">
+                    <img id="Fig1" class="selected img-responsive" src="images/Fig1.png" alt="maxtemp" >
                 </div>
                 <div class="col-lg-6 col-md-3 col-sm-3">
                     <img id="Fig2" src="images/Fig2.png" alt="humidity" class="img-responsive">
@@ -114,14 +108,10 @@
         </div>
     </div>
     <footer class="footer">
-        <p style="text-align: center"><i class="glyphicon glyphicon-copyright-mark"> Copyright Coding Bootcamp 2018</i></p>
-
+            <p style = "text-align: center"><i class="glyphicon glyphicon-copyright-mark"> Copyright Coding Bootcamp 2018</i></p>
+            
     </footer>
 
 </body>
-
-<!--
-
--->
 
 </html>
